@@ -37,6 +37,7 @@ public class LancheMain extends ApplicationWindow {
 	 */
 	public LancheMain() {
 		super(null);
+		setShellStyle(SWT.MIN);
 		createActions();
 		addToolBar(SWT.FLAT | SWT.WRAP);
 		addMenuBar();
@@ -85,7 +86,7 @@ public class LancheMain extends ApplicationWindow {
 		});
 		
 		btnEnter = new Button(container, SWT.CENTER);
-		btnEnter.setText("Acessar");
+		btnEnter.setText("Access");
 		btnEnter.setForeground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		btnEnter.setFont(SWTResourceManager.getFont("Arial Black", 12, SWT.NORMAL));
 		btnEnter.setBounds(250, 198, 150, 35);
@@ -107,6 +108,11 @@ public class LancheMain extends ApplicationWindow {
 	public void setWallet() {	
 		if(TextUtils.isEmpty(txtSeed.getText())) {
 			JOptionPane.showMessageDialog(null, "Please report your seed", "Attencion", JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+		String seed12[] =   txtSeed.getText().toString().split(" ");
+		if(seed12.length <11) {
+			JOptionPane.showMessageDialog(null, "Please report your seed coorect!", "Attencion", JOptionPane.ERROR_MESSAGE);
 			return;
 		}
 		WalletLunes lunes = new WalletLunes(txtSeed.getText());
@@ -160,6 +166,9 @@ public class LancheMain extends ApplicationWindow {
 	 */
 	@Override
 	protected void configureShell(Shell newShell) {
+		String local  = System.getProperty("user.dir") + System.getProperty("file.separator")+"src\\main\\resources\\img\\lunes.png";
+		newShell.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_DARK_SHADOW));
+		newShell.setImage(SWTResourceManager.getImage(local));
 		newShell.setModified(true);
 		newShell.setMinimumSize(new Point(500, 300));
 		super.configureShell(newShell);

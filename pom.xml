@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>lunes.wallet.desktop</groupId>
 	<artifactId>WalletDesktop</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>WalletDesktop</name>
 	<description>Wlallet Lunes to Desktop Offine</description>
 

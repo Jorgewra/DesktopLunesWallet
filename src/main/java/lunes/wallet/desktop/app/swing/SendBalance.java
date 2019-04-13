@@ -38,9 +38,12 @@ public class SendBalance extends Dialog {
 	 * Create the dialog.
 	 * @param parentShell
 	 */
-	public SendBalance(Shell parentShell) {
-		super(parentShell);
-	}
+	/*
+	 * public SendBalance(Shell parentShell) { super(parentShell); }
+	 */
+	/**
+	 * @wbp.parser.constructor
+	 */
 	public SendBalance(Shell parentShell, String seed) {
 		super(parentShell);
 		this.seed = seed;
