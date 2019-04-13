@@ -28,7 +28,7 @@ mvn clean install
 
 ## Versioning
 
-For the versions available, see the [tags on this repository](https://github.com/Jorgewra/DesktopLunesWallet/tags). 
+For the versions available, see the [tags on this repository](https://github.com/Jorgewra/DesktopLunesWallet/releases). 
 
 ## Authors
 
