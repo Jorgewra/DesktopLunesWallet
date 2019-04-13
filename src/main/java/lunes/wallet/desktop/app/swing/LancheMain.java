@@ -166,9 +166,9 @@ public class LancheMain extends ApplicationWindow {
 	 */
 	@Override
 	protected void configureShell(Shell newShell) {
-		String local  = System.getProperty("user.dir") + System.getProperty("file.separator")+"src\\main\\resources\\img\\lunes.png";
+//		String local  = getClass().getResource("/resources/img/lunes.png").getRef()
 		newShell.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_DARK_SHADOW));
-		newShell.setImage(SWTResourceManager.getImage(local));
+//		newShell.setImage(SWTResourceManager.getImage(local));
 		newShell.setModified(true);
 		newShell.setMinimumSize(new Point(500, 300));
 		super.configureShell(newShell);

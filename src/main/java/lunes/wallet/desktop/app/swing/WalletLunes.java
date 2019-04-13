@@ -239,8 +239,8 @@ public class WalletLunes extends ApplicationWindow {
 	 */
 	@Override
 	protected void configureShell(Shell newShell) {
-		String local  = System.getProperty("user.dir") + System.getProperty("file.separator")+"src\\main\\resources\\img\\lunes2.png";
-		newShell.setImage(SWTResourceManager.getImage(local));
+//		String local  = System.getProperty("user.dir") + System.getProperty("file.separator")+"src\\main\\resources\\img\\lunes2.png";
+//		newShell.setImage(SWTResourceManager.getImage(local));
 		newShell.setModified(true);
 		newShell.setMinimumSize(new Point(500, 300));
 		super.configureShell(newShell);
