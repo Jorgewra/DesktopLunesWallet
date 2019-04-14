@@ -1,4 +1,4 @@
-# Wallet Lunes Desktop Offeline
+# Wallet Lunes Desktop Offiline
 
 Sending and receiving coins LUNES Basic
 
