@@ -52,8 +52,8 @@ public class WalletController implements WalletInterfaceServices{
 	public String sendLunes(String seed, Double amont, String recipient) throws IOException, URISyntaxException{
 		PrivateKeyAccount alice = PrivateKeyAccount.fromSeed(seed, Account.MAINNET);		
 		Node node = new Node();
-		Double mont = amont * CONVERT_VALUE;
-		String txId = node.transfer(alice, recipient, mont.intValue(), FEE);		
+		long mont = (long) (amont * CONVERT_VALUE);
+		String txId = node.transfer(alice, recipient, mont, FEE);		
 		return txId;
 	}
 	@Override
